@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="js/calculusAPI.js"> </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="header" style="background-color: rgb(0, 140, 255);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="index.html">Simple Calculator</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Basic Mode</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="calculus.html">Calculus Mode<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="matrix.html">Matrix Mode</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form id="calc">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+
+                <div class="col-sm">
+                    <div class="input-group lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Polynomial Expression:</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="x^2 - 1" id="poly">
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="input-group lg">
+                        <label for="validationCustom04"></label>
+                        <select class="custom-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose operation</option>
+                            <option value="derive">Differentiate</option>
+                            <option value="integrate">Integrate</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid operation.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <input id="sub" class="btn btn-primary border-0"
+                        style="margin-left: 50px; background-color: #008cff;" type="submit" value="Submit">
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <div class="row justify-content-md-center" style="position: relative; margin-top: 50px; margin-left: 633px; width: 350px;" id="blk">
+        <div class="card">
+            <div class="card-body" id="answer">
+                
+            </div>
+        </div>
+    </div>
+
+    <form id="color">
+        <div class="input-group" style="position: relative;margin-top: 350px; width: 250px; margin-left: 250px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="ba3">Theme of Website</span>
+            </div>
+            <input type="color" class="form-control" value="#008cff" id="c">
+        </div>
+    </form>
+
+</body>
+
+</html>

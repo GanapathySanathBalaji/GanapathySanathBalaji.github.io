@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const exp = document.querySelector('#poly').value;
 
         const opr = document.querySelector('#validationCustom04').value;
-        const operation = (opr === 'derive')? 'derivative' : 'integral';
-        const constant = (opr === 'derive')? '':' + C';
+        const operation = (opr === 'derive') ? 'derivative' : 'integral';
+        const constant = (opr === 'derive') ? '' : ' + C';
 
-        fetch(`https://newton.now.sh/${opr}/${exp}`)
+        fetch(`https://newton.now.sh/api/v2/${opr}/${exp}`)
             .then(response => response.json())
             .then(data => {
                 document.querySelector('#answer').innerHTML = `The ${operation} of ${exp} is ${data.result}${constant}`;
